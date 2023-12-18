@@ -1,0 +1,293 @@
+
+        \documentclass[a4paper,12pt]{article}
+
+        \usepackage[utf8]{inputenc}
+        \usepackage[T1]{fontenc}
+        \usepackage[russian]{babel}
+        \usepackage{amsmath}
+        \usepackage{tikz}
+        \usetikzlibrary{graphs,graphs.standard}
+
+        \begin{document}
+        
+        \begin{center} 
+        Исследование операций --  2023 
+        \end{center}
+        \newline 
+        \begin{center}
+        \textbf{Выполнил ................................................... группа .........   Задание по теме <<Поиск максимального потока в сети.>> }
+        \end{center}
+        \begin{flushleft} 
+        \begin{center}     
+        \textit{Найти максимальный поток в графе} 
+        \end{center}
+        \end{flushleft}  
+        \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+                            thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+          \node[main node] (1) [left]{1};
+          \node[main node] (2) [above right of=1] {2};
+          \node[main node] (3) [below right of=1] {3};
+          \node[main node] (4) [right of=2] {4};
+          \node[main node] (5) [right of=3] {5};
+          \node[main node] (6) [right of=4] {6};
+          \node[main node] (7) [right of=5] {7};
+          \node[main node] (8) [below right of=6] {8};
+
+          % Вставка значений из матрицы
+          \draw (1) -- node[label, above=5, ] {49} (2);
+  \draw (1) -- node[label, below=5, ] {46} (3);
+  \draw (2) -- node[label, above=5, ] {24} (4);
+  \draw (2) -- node[label, above, ] {51} (7);
+  \draw (3) -- node[label, below=5, ] {33} (5);
+  \draw (4) -- node[label, above=5, ] {43} (6);
+  \draw (4) -- node[label, below, ] {33} (8);
+  \draw (5) -- node[label, below=5, ] {31} (7);
+  \draw (5) -- node[label, below, ] {40} (8);
+  \draw (6) -- node[label, above=5, ] {20} (8);
+  \draw (7) -- node[label, below=5, ] {49} (8);
+
+        \end{tikzpicture}
+        \caption{}
+        \end{figure}
+        Максимальный поток: 82\\Справа минимального разреза находятся вершины: 2, 4, 5, 6, 7, 8\\
+
+            \caption{Граф 1}
+            \end{figure}
+            
+        \begin{center} 
+        Исследование операций --  2023 
+        \end{center}
+        \newline 
+        \begin{center}
+        \textbf{Выполнил ................................................... группа .........   Задание по теме <<Поиск максимального потока в сети.>> }
+        \end{center}
+        \begin{flushleft} 
+        \begin{center}     
+        \textit{Найти максимальный поток в графе} 
+        \end{center}
+        \end{flushleft}  
+        \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+                            thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+          \node[main node] (1) [left]{1};
+          \node[main node] (2) [above right of=1] {2};
+          \node[main node] (3) [below right of=1] {3};
+          \node[main node] (4) [right of=2] {4};
+          \node[main node] (5) [right of=3] {5};
+          \node[main node] (6) [right of=4] {6};
+          \node[main node] (7) [right of=5] {7};
+          \node[main node] (8) [below right of=6] {8};
+
+          % Вставка значений из матрицы
+          \draw (1) -- node[label, above=5, ] {31} (2);
+  \draw (1) -- node[label, below=5, ] {48} (3);
+  \draw (1) -- node[label, below, ] {54} (6);
+  \draw (2) -- node[label, above=5, ] {25} (4);
+  \draw (2) -- node[label, above=5, ] {38} (5);
+  \draw (3) -- node[label, below=5, ] {11} (4);
+  \draw (3) -- node[label, below=5, ] {39} (5);
+  \draw (4) -- node[label, above=5, ] {15} (6);
+  \draw (5) -- node[label, below=5, ] {30} (7);
+  \draw (5) -- node[label, below, ] {27} (8);
+  \draw (6) -- node[label, above=5, ] {24} (8);
+  \draw (7) -- node[label, below=5, ] {46} (8);
+
+        \end{tikzpicture}
+        \caption{}
+        \end{figure}
+        Максимальный поток: 81\\Справа минимального разреза находятся вершины: 8, 7\\
+
+            \caption{Граф 2}
+            \end{figure}
+            \newpage
+        \begin{center} 
+        Исследование операций --  2023 
+        \end{center}
+        \newline 
+        \begin{center}
+        \textbf{Выполнил ................................................... группа .........   Задание по теме <<Поиск максимального потока в сети.>> }
+        \end{center}
+        \begin{flushleft} 
+        \begin{center}     
+        \textit{Найти максимальный поток в графе} 
+        \end{center}
+        \end{flushleft}  
+        \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+                            thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+          \node[main node] (1) [left]{1};
+          \node[main node] (2) [above right of=1] {2};
+          \node[main node] (3) [below right of=1] {3};
+          \node[main node] (4) [right of=2] {4};
+          \node[main node] (5) [right of=3] {5};
+          \node[main node] (6) [right of=4] {6};
+          \node[main node] (7) [right of=5] {7};
+          \node[main node] (8) [below right of=6] {8};
+
+          % Вставка значений из матрицы
+          \draw (1) -- node[label, above=5, ] {43} (2);
+  \draw (1) -- node[label, below=5, ] {26} (3);
+  \draw (2) -- node[label, above=5, ] {13} (4);
+  \draw (2) -- node[label, above, ] {18} (7);
+  \draw (3) -- node[label, below=5, ] {24} (5);
+  \draw (3) -- node[label, below, ] {54} (6);
+  \draw (4) -- node[label, above=5, ] {47} (6);
+  \draw (4) -- node[label, above=5, ] {17} (7);
+  \draw (5) -- node[label, below=5, ] {11} (7);
+  \draw (6) -- node[label, above=5, ] {21} (8);
+  \draw (7) -- node[label, below=5, ] {28} (8);
+
+        \end{tikzpicture}
+        \caption{}
+        \end{figure}
+        Максимальный поток: 49\\Справа минимального разреза находятся вершины: 8\\
+
+            \caption{Граф 3}
+            \end{figure}
+            
+        \begin{center} 
+        Исследование операций --  2023 
+        \end{center}
+        \newline 
+        \begin{center}
+        \textbf{Выполнил ................................................... группа .........   Задание по теме <<Поиск максимального потока в сети.>> }
+        \end{center}
+        \begin{flushleft} 
+        \begin{center}     
+        \textit{Найти максимальный поток в графе} 
+        \end{center}
+        \end{flushleft}  
+        \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+                            thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+          \node[main node] (1) [left]{1};
+          \node[main node] (2) [above right of=1] {2};
+          \node[main node] (3) [below right of=1] {3};
+          \node[main node] (4) [right of=2] {4};
+          \node[main node] (5) [right of=3] {5};
+          \node[main node] (6) [right of=4] {6};
+          \node[main node] (7) [right of=5] {7};
+          \node[main node] (8) [below right of=6] {8};
+
+          % Вставка значений из матрицы
+          \draw (1) -- node[label, above=5, ] {10} (2);
+  \draw (1) -- node[label, below=5, ] {34} (3);
+  \draw (2) -- node[label, above=5, ] {10} (4);
+  \draw (2) -- node[label, above=5, ] {13} (5);
+  \draw (3) -- node[label, below=5, ] {10} (4);
+  \draw (3) -- node[label, below=5, ] {31} (5);
+  \draw (4) -- node[label, above=5, ] {47} (6);
+  \draw (5) -- node[label, below=5, ] {33} (6);
+  \draw (5) -- node[label, below=5, ] {13} (7);
+  \draw (6) -- node[label, above=5, ] {19} (8);
+  \draw (7) -- node[label, below=5, ] {31} (8);
+
+        \end{tikzpicture}
+        \caption{}
+        \end{figure}
+        Максимальный поток: 32\\Справа минимального разреза находятся вершины: 8, 7\\
+
+            \caption{Граф 4}
+            \end{figure}
+            \newpage
+        \begin{center} 
+        Исследование операций --  2023 
+        \end{center}
+        \newline 
+        \begin{center}
+        \textbf{Выполнил ................................................... группа .........   Задание по теме <<Поиск максимального потока в сети.>> }
+        \end{center}
+        \begin{flushleft} 
+        \begin{center}     
+        \textit{Найти максимальный поток в графе} 
+        \end{center}
+        \end{flushleft}  
+        \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+                            thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+          \node[main node] (1) [left]{1};
+          \node[main node] (2) [above right of=1] {2};
+          \node[main node] (3) [below right of=1] {3};
+          \node[main node] (4) [right of=2] {4};
+          \node[main node] (5) [right of=3] {5};
+          \node[main node] (6) [right of=4] {6};
+          \node[main node] (7) [right of=5] {7};
+          \node[main node] (8) [below right of=6] {8};
+
+          % Вставка значений из матрицы
+          \draw (1) -- node[label, above=5, ] {35} (2);
+  \draw (1) -- node[label, below=5, ] {38} (3);
+  \draw (1) -- node[label, below, ] {13} (7);
+  \draw (2) -- node[label, above=5, ] {40} (4);
+  \draw (2) -- node[label, above, ] {33} (7);
+  \draw (3) -- node[label, below=5, ] {53} (4);
+  \draw (3) -- node[label, below=5, ] {28} (5);
+  \draw (4) -- node[label, above=5, ] {25} (6);
+  \draw (5) -- node[label, below=5, ] {32} (7);
+  \draw (6) -- node[label, above=5, ] {23} (8);
+  \draw (7) -- node[label, below=5, ] {40} (8);
+
+        \end{tikzpicture}
+        \caption{}
+        \end{figure}
+        Максимальный поток: 63\\Справа минимального разреза находятся вершины: 8\\
+
+            \caption{Граф 5}
+            \end{figure}
+            
+        \begin{center} 
+        Исследование операций --  2023 
+        \end{center}
+        \newline 
+        \begin{center}
+        \textbf{Выполнил ................................................... группа .........   Задание по теме <<Поиск максимального потока в сети.>> }
+        \end{center}
+        \begin{flushleft} 
+        \begin{center}     
+        \textit{Найти максимальный поток в графе} 
+        \end{center}
+        \end{flushleft}  
+        \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+                            thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+          \node[main node] (1) [left]{1};
+          \node[main node] (2) [above right of=1] {2};
+          \node[main node] (3) [below right of=1] {3};
+          \node[main node] (4) [right of=2] {4};
+          \node[main node] (5) [right of=3] {5};
+          \node[main node] (6) [right of=4] {6};
+          \node[main node] (7) [right of=5] {7};
+          \node[main node] (8) [below right of=6] {8};
+
+          % Вставка значений из матрицы
+          \draw (1) -- node[label, above=5, ] {41} (2);
+  \draw (1) -- node[label, below=5, ] {19} (3);
+  \draw (1) -- node[label, below, ] {15} (4);
+  \draw (2) -- node[label, above=5, ] {26} (4);
+  \draw (2) -- node[label, above=5, ] {36} (5);
+  \draw (2) -- node[label, above, ] {14} (7);
+  \draw (3) -- node[label, below=5, ] {29} (4);
+  \draw (3) -- node[label, below=5, ] {32} (5);
+  \draw (4) -- node[label, above=5, ] {22} (6);
+  \draw (4) -- node[label, above=5, ] {24} (7);
+  \draw (5) -- node[label, below=5, ] {49} (7);
+  \draw (6) -- node[label, above=5, ] {35} (8);
+  \draw (7) -- node[label, below=5, ] {24} (8);
+
+        \end{tikzpicture}
+        \caption{}
+        \end{figure}
+        Максимальный поток: 46\\Справа минимального разреза находятся вершины: 8, 6\\
+
+            \caption{Граф 6}
+            \end{figure}
+            \newpage
+        \end{document}
+        
